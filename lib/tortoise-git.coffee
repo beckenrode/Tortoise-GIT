@@ -62,19 +62,3 @@ module.exports = TortoiseGit =
   commitFromTreeView: ->
     currFile = resolveTreeSelection()
     commit(currFile) if currFile?
-
-  deactivate: ->
-    @modalPanel.destroy()
-    @subscriptions.dispose()
-    @tortoiseGitView.destroy()
-
-  serialize: ->
-    tortoiseGitViewState: @tortoiseGitView.serialize()
-
-  toggle: ->
-    console.log 'TortoiseGit was toggled!'
-
-    if @modalPanel.isVisible()
-      @modalPanel.hide()
-    else
-      @modalPanel.show()
