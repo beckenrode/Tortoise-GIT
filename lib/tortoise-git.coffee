@@ -24,11 +24,16 @@ resolveTreeSelection = ->
     treeView = require(treeView.mainModulePath)
     serialView = treeView.serialize()
     serialView.selectedPath = serialView.selectedPath.replace " ", "%20"
-    console.log(serialView)
     serialView.selectedPath
 
 commit = (currFile)->
   tortoiseGit(["/command:commit", "/path:"+currFile], path.dirname(currFile))
+
+pull = (currFile)->
+  tortoiseGit(["/command:pull", "/path:"+currFile], path.dirname(currFile))
+
+push = (currFile)->
+  tortoiseGit(["/command:push", "/path:"+currFile], path.dirname(currFile))
 
 module.exports = TortoiseGit =
   config:
@@ -42,7 +47,17 @@ module.exports = TortoiseGit =
   subscriptions: null
 
   activate: (state) ->
+    atom.commands.add "atom-workspace", "tortoise-git:pushFromTreeView": => @pushFromTreeView()
+    atom.commands.add "atom-workspace", "tortoise-git:pullFromTreeView": => @pullFromTreeView()
     atom.commands.add "atom-workspace", "tortoise-git:commitFromTreeView": => @commitFromTreeView()
+
+  pushFromTreeView: ->
+    currFile = resolveTreeSelection()
+    push(currFile) if currFile?
+
+  pullFromTreeView: ->
+    currFile = resolveTreeSelection()
+    pull(currFile) if currFile?
 
   commitFromTreeView: ->
     currFile = resolveTreeSelection()

@@ -11,6 +11,14 @@
       "label": "Tortoise GIT",
       "submenu": [
         {
+          "label": "Push"
+          "command": "tortoise-git:pushFromTreeView"
+        }
+        {
+          "label": "Pull"
+          "command": "tortoise-git:pullFromTreeView"
+        }
+        {
           "label": "Commit"
           "command": "tortoise-git:commitFromTreeView"
         }
