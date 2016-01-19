@@ -1,0 +1,21 @@
+{
+  "name": "tortoise-git",
+  "productName": "Tortoise Git",
+  "main": "./lib/tortoise-git",
+  "version": "0.1.0",
+  "description": "A package that allows Atom to interact with TortoiseGit to perform GIT commands.",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": [
+      "tortoise-git:commitFromTreeView"
+    ]
+  },
+  "repository": "https://github.com/beckenrode/tortoise-git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
