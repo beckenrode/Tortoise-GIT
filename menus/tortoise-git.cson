@@ -5,10 +5,6 @@
       "label": "Tortoise GIT",
       "submenu": [
         {
-          "label": "Add"
-          "command": "tortoise-git:addFromTreeView"
-        }
-        {
           "label": "Push"
           "command": "tortoise-git:pushFromTreeView"
         }
