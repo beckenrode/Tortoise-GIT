@@ -1,11 +1,5 @@
 # See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
 'context-menu':
-  'atom-text-editor': [
-    {
-      'label': 'Toggle tortoise-git'
-      'command': 'tortoise-git:toggle'
-    }
-  ]
   ".tree-view": [
     {
       "label": "Tortoise GIT",
@@ -25,17 +19,3 @@
       ]
     }
   ]
-'menu': [
-  {
-    'label': 'Packages'
-    'submenu': [
-      'label': 'tortoise-git'
-      'submenu': [
-        {
-          "label": "Commit"
-          "command": "tortoise-git:commitFromTreeView"
-        }
-      ]
-    ]
-  }
-]
