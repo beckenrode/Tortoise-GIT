@@ -10,7 +10,7 @@
         }
         {
           "label": "Pull"
-          "command": "tortoise-git:pullFromTreeView"
+          "command": "tortoise-git:pullFromTreeView" 
         }
         {
           "label": "Commit"
