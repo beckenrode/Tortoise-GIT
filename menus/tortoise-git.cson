@@ -16,6 +16,18 @@
           "label": "Commit"
           "command": "tortoise-git:commitFromTreeView"
         }
+        {
+          "label": "Diff"
+          "command": "tortoise-git:diffFromTreeView"
+        }
+        {
+          "label": "Show log"
+          "command": "tortoise-git:logFromTreeView"
+        }
+        {
+          "label": "Switch/Checkout"
+          "command": "tortoise-git:checkoutFromTreeView"
+        }
       ]
     }
   ]

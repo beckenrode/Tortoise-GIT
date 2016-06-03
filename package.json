@@ -8,7 +8,12 @@
   ],
   "activationCommands": {
     "atom-workspace": [
-      "tortoise-git:commitFromTreeView"
+      "tortoise-git:pushFromTreeView",
+	  "tortoise-git:pullFromTreeView",
+	  "tortoise-git:commitFromTreeView",
+	  "tortoise-git:diffFromTreeView",
+	  "tortoise-git:logFromTreeView",
+	  "tortoise-git:checkoutFromTreeView"
     ]
   },
   "repository": "https://github.com/beckenrode/tortoise-git",
