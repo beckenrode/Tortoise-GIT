@@ -20,16 +20,16 @@ tortoiseGit = (args, cwd) ->
 
 resolveTreeSelection = ->
   if atom.packages.isPackageLoaded("tree-view")
-    treeView = atom.packages.getLoadedPackage("tree-view")
-    treeView = require(treeView.mainModulePath)
+    treeViewPkg = atom.packages.getLoadedPackage("tree-view")
+    treeView = treeViewPkg.mainModule.treeView
     serialView = treeView.serialize()
     serialView.selectedPath = serialView.selectedPath.replace " ", "%20"
     serialView.selectedPath
 
 resolveTreeRoot = ->
   if atom.packages.isPackageLoaded("tree-view")
-    treeView = atom.packages.getLoadedPackage("tree-view")
-    treeView = require(treeView.mainModulePath)
+    treeViewPkg = atom.packages.getLoadedPackage("tree-view")
+    treeView = treeViewPkg.mainModule.treeView
     serialView = treeView.serialize()
     rootDir = Object.keys(serialView.directoryExpansionStates)[0]
     rootDir = rootDir.replace " ", "%20"
