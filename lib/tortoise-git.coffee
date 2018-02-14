@@ -3,7 +3,7 @@ path = require "path"
 
 tortoiseGit = (args, cwd) ->
   spawn = require("child_process").spawn
-  command = atom.config.get("tortoise-git.tortoisePath") + "/TortoiseGitProc.exe"
+  command = atom.config.get("Tortoise-GIT.tortoisePath") + "/TortoiseGitProc.exe"
   options =
     cwd: cwd
 

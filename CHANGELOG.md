@@ -1,3 +1,6 @@
+## 0.1.3 - Contributions from [mbouchard](https://github.com/mbouchard)
+* Support for Atom 1.24
+
 ## 0.1.2 - Contributions from [mbouchard](https://github.com/mbouchard)
 * Support for Atom 1.17
 
