@@ -23,8 +23,8 @@ resolveTreeSelection = ->
     treeViewPkg = atom.packages.getLoadedPackage("tree-view")
     treeView = treeViewPkg.mainModule.treeView
     serialView = treeView.serialize()
-    serialView.selectedPath = serialView.selectedPath.replace " ", "%20"
-    serialView.selectedPath
+    serialView.selectedPaths[0] = serialView.selectedPaths[0].replace " ", "%20"
+    serialView.selectedPaths[0]
 
 resolveTreeRoot = ->
   if atom.packages.isPackageLoaded("tree-view")
